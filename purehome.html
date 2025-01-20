@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f8fc;
+        }
+
+        header {
+            background: linear-gradient(to right, #0056b3, #007AFF);
+            color: white;
+            padding: 20px 0;
+            position: relative;
+        }
+
+        header img {
+            max-width: 100px;
+            max-height: 90px;
+            position: absolute;
+            top: 10px;
+            left: 100px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: linear-gradient(to right, #0056b3, #007AFF);
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #4A90E2;
+        }
+
+        .hero {
+            background: url('purehomerealestate/shutterstock-779374957.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            background: #007AFF;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero button:hover {
+            background: #0056b3;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .properties {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .property {
+            flex: 1;
+            padding: 20px;
+            max-width: 300px;
+        }
+
+        .property img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .property h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #0056b3;
+        }
+
+        footer {
+            background: #0056b3;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        .contact-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .contact-image {
+            flex: 1;
+            max-width: 50%;
+            padding-right: 20px;
+        }
+
+        .contact-image img {
+            width: 100%;
+            height: 680px;
+            border-radius: 8px;
+        }
+
+        .contact-form {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            color: #0056b3;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #007AFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background: #0056b3;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-left,
+        .footer-center,
+        .footer-right {
+            flex: 1;
+        }
+
+        .footer-left .footer-logo {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+
+        .footer-left h3,
+        .footer-center p {
+            margin-bottom: 10px;
+        }
+
+        .footer-center .contact-info p,
+        .footer-center .social-media a {
+            margin: 5px 0;
+        }
+
+        .social-media a {
+            margin: 0 10px;
+        }
+
+        .social-media img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .footer-right iframe {
+            border-radius: 8px;
+        }
+
+
+    </style>
+    <title>Real Estate Agency</title>
+</head>
+<body>
+    <header>
+        <img src="white-and-green-logo.png" alt="Agency Logo">
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#listings">Listings</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="hero">
+        <div>
+            <h2>Your Dream Home Awaits</h2>
+            <a href="https://purehome-re.ae/"><button>Explore Listings</button></a>
+        </div>
+    </div>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At Pure Home Real Estate, we are dedicated to helping you find the perfect property.</p>
+        <p>With years of experience, we bring you the best real estate options tailored to your needs.</p>
+    </section>
+
+    <section id="listings">
+        <h2>Our Listings</h2>
+        <div class="properties">
+            <div class="property">
+                <img src="luxury_villa.avif" alt="Property 1">
+                <h3>Luxury Villa</h3>
+                <p>Experience the pinnacle of luxury with this stunning villa.</p>
+            </div>
+            <div class="property">
+                <img src="modern_apartment.webp" alt="Property 2">
+                <h3>Modern Apartment</h3>
+                <p>Perfect for city living, this apartment offers style and convenience.</p>
+            </div>
+            <div class="property">
+                <img src="cozy_cottage.jpg" alt="Property 3">
+                <h3>Cozy Cottage</h3>
+                <p>A charming retreat away from the hustle and bustle.</p>
+            </div>
+        </div>
+        <div class="properties">
+            <div class="property">
+                <img src="luxury_villa.avif" alt="Property 1">
+                <h3>Luxury Villa</h3>
+                <p>Experience the pinnacle of luxury with this stunning villa.</p>
+            </div>
+            <div class="property">
+                <img src="modern_apartment.webp" alt="Property 2">
+                <h3>Modern Apartment</h3>
+                <p>Perfect for city living, this apartment offers style and convenience.</p>
+            </div>
+            <div class="property">
+                <img src="cozy_cottage.jpg" alt="Property 3">
+                <h3>Cozy Cottage</h3>
+                <p>A charming retreat away from the hustle and bustle.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-image">
+            <img src="Abu-Dhabi-events.jpg" alt="Contact Us">
+        </div>
+        <form class="contact-form">
+            <h2>Contact Us</h2>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Left Section: Logo & About Us -->
+            <div class="footer-left">
+                <img src="white-and-green-logo.png" alt="Agency Logo" class="footer-logo">
+                <h3>About Us</h3>
+                <p>We are dedicated to providing the best real estate services with years of experience in the industry.</p>
+            </div>
+
+            <!-- Center Section: Contact & Social Media -->
+            <div class="footer-center">
+                <div class="contact-info">
+                    <p><strong>Contact:</strong></p>
+                    <p>Phone: +971 123 456 789</p>
+                    <p>Email: info@blue-realty.com</p>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/"><img src="facebook-icon.webp" alt="Facebook"></a>
+                    <a href="https://x.com/?mx=2"><img src="twitter-icon.jpg" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/"><img src="instagram-icon.jpg" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <!-- Right Section: Google Map -->
+            <div class="footer-right">
+                <iframe src="https://www.google.com/maps/embed?pb=...your-map-embed-link..." width="250" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
